@@ -5,6 +5,8 @@ import torch
 import cv2
 import torch.utils.data as udata
 from numpy.random import RandomState
+import torch
+torch.cuda.empty_cache()
 
 class TrainDataset(udata.Dataset):
     def __init__(self, inputname, gtname,patchsize,length):
@@ -31,6 +33,7 @@ class TrainDataset(udata.Dataset):
 
         gt_file = os.path.join(self.gt_dir, file_name)
         B = cv2.imread(gt_file)
+       # print(B)
         b, g, r = cv2.split(B)
         gt_img = cv2.merge([r, g, b])
         B = gt_img[row: row + self.patch_size, col : col + self.patch_size]

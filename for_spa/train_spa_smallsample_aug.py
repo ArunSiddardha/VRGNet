@@ -1,5 +1,5 @@
 # This is the small sample experiment. total samples = real samples (1k) + fake samples
-#!/usr/bin/env python
+# !/usr/bin/env python
 # -*- coding:utf-8 -*-
 # Power by HongW 2020-05-11 18:10:49
 #From rain generation to rain removal https://arxiv.org/abs/2008.03580
